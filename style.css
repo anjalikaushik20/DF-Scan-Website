@@ -48,7 +48,7 @@ body{
   border: none;
   outline: none;
   background: #fff;
-  color: #5256ad;
+  color: black;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -65,7 +65,7 @@ body{
   border: none;
   outline: none;
   background: #fff;
-  color: #5256ad;
+  color: black;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 25px;
