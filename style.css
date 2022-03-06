@@ -15,8 +15,8 @@ body{
 }
 .drag-area{
   border: 2px dashed #fff;
-  height: 500px;
-  width: 700px;
+  height: 400px;
+  width: 500px;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -57,4 +57,17 @@ body{
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
+}
+.scan-area button{
+  padding: 10px 25px ;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-left: 200px;
 }
