@@ -76,8 +76,7 @@ body{
 
 .navbar {
   transition: all 0.4s;
-  text-transform: capitalize;
-  margin-left: 40%;
+  position: relative;
 }
 
 .navbar .nav-link {
@@ -92,4 +91,13 @@ body{
 
 .navbar .navbar-brand {
   color: #fff;
+}
+
+.navbar-centered a{
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 30px;
 }
