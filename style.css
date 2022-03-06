@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 body{
   display: flex;
@@ -100,4 +100,5 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 30px;
+  font-family: Verdana, Tahoma, sans-serif;
 }
