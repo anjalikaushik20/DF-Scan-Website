@@ -11,7 +11,7 @@ body{
   justify-content: center;
   min-height: 100vh;
   /* background: #5256ad; */
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("assets/faces_dataset.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url("assets/faces_dataset.jpg");
 }
 .drag-area{
   border: 2px dashed #fff;
