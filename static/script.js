@@ -51,7 +51,7 @@ function showFile(){
     }
     fileReader.readAsDataURL(file);
   }else{
-    alert("This is not a Video File!");
+    alert("This is not a Video File! (Accepted format: mp4)");
     dropArea.classList.remove("active");
     dragText.textContent = "Drag & Drop to Upload File";
   }
