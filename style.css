@@ -71,6 +71,12 @@ body{
   margin-top: 25px;
   margin-left: 180px;
 }
+h5 {
+  padding-top: 20px;
+  font-family: Verdana, Tahoma, sans-serif;
+  color: white;
+  text-align: center;
+}
 
 /* Navbar */
 

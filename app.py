@@ -9,7 +9,9 @@ def home():
 
 @app.route("/scan", methods=['POST'])
 def scan():
-    print("Scanned")
+    output = "Rake"
+
+    return render_template('index.html', result = 'Classification: {}'.format(output))
 
 
 if __name__=="main":
