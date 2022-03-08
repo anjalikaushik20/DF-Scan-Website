@@ -11,7 +11,7 @@ def home():
 def scan():
     output = "Rake"
 
-    return render_template('index.html', result = 'Classification: {}'.format(output))
+    return render_template('index.html', result = '{}'.format(output))
 
 
 if __name__=="main":
