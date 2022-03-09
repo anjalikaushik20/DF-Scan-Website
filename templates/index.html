@@ -22,13 +22,13 @@
     </nav>
   </header>
 
-  <form action="{{ url_for('scan')}}" method="POST">
+  <form name="myForm" action="{{ url_for('scan')}}" method="POST">
     <div class="drag-area row">
       <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
       <header>Drag & Drop to Upload File</header>
       <span>OR</span>
       <button type="button">Browse File</button>
-      <input type="file" hidden>
+      <input type="file" name="fileName" hidden>
     </div>
 
     <div class="scan-area">
