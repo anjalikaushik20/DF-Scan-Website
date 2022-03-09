@@ -2,7 +2,7 @@
 const dropArea = document.querySelector(".drag-area"),
 dragText = dropArea.querySelector("header"),
 button = dropArea.querySelector("button"),
-input = dropArea.querySelector("input");
+input = document.querySelector(".myFile");
 let file; //this is a global variable and we'll use it inside multiple functions
 
 button.onclick = ()=>{
@@ -49,6 +49,7 @@ function showFile(){
       dropArea.innerHTML = imgTag; //adding that created tag inside dropArea container
     }
     fileReader.readAsDataURL(file);
+    console.log(input.value);
   }else{
     alert("This is not a Video File! (Accepted format: mp4)");
     dropArea.classList.remove("active");
