@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import cgitb; cgitb.enable()
-# import cgi, os
+# import cgi
 
 app = Flask(__name__)
 
@@ -15,8 +15,10 @@ def scan():
     # fileitem = form.getvalue('fileName')
     fileitem = request.files.get('fileName')
 
+    name = fileitem.filename.split('.')[0]
+
     if fileitem:
-        fileitem.save('videos/xyz.mp4')
+        fileitem.save(f'videos/{name}.mp4')
         message = 'The file was uploaded successfully'
     else:
         message = 'No file was uploaded'
