@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
-import cgitb; cgitb.enable()
+import cgitb
+from sklearn import preprocessing; cgitb.enable()
 # import cgi
+import python.dataPrep as dp
 
 app = Flask(__name__)
 
@@ -13,19 +15,25 @@ def home():
 def scan():
     # form = cgi.FieldStorage()
     # fileitem = form.getvalue('fileName')
-    fileitem = request.files.get('fileName')
+    _fileitem = request.files.get('fileName')
 
-    name = fileitem.filename.split('.')[0]
+    name = _fileitem.filename.split('.')[0]
 
-    if fileitem:
-        fileitem.save(f'videos/{name}.mp4')
+    if _fileitem:
+        _fileitem.save(f'videos/{name}.mp4')
         message = 'The file was uploaded successfully'
     else:
         message = 'No file was uploaded'
 
-    output = "Rake"
+    
     print(message)
-    print(fileitem)
+    print(_fileitem)
+
+    #passing for preprocessing
+    output = dp.dataProcess(name)
+
+    #gibberish
+    # output = "Rake"
 
     return render_template('index.html', result = '{}'.format(output))
 
