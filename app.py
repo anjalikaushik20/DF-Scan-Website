@@ -48,7 +48,7 @@ def scan():
         return render_template('index.html', result = '{}'.format(output), loading = '{}'.format(" "))
         
     else:
-        return render_template('index.html', result = '{}'.format('Error!'), loading = '{}'.format(" "))
+        return render_template('index.html', result = '{}'.format('Error: Not an mp4 file!'), loading = '{}'.format(" "))
 
 
 if __name__=="main":
