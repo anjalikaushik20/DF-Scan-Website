@@ -19,6 +19,7 @@ def scan():
     # fileitem = form.getvalue('fileName')
     _fileitem = request.files.get('fileName')
 
+    _fullname = _fileitem.filename
     name = _fileitem.filename.split('.')[0]
 
     if _fileitem:
@@ -32,6 +33,7 @@ def scan():
     
     print(message)
     print(_fileitem)
+    print(_fullname)
 
     #passing for preprocessing
     output = dp.dataProcess(name)
