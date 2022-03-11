@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template('index.html')
+    return render_template('index.html', loading = '{}'.format("Loading!"))
 
 @app.route("/scan", methods=['POST'])
 def scan():
@@ -26,6 +26,8 @@ def scan():
         message = 'The file was uploaded successfully'
     else:
         message = 'No file was uploaded'
+        output = 'Try Again!'
+        return render_template('index.html', result = '{}'.format(output))
 
     
     print(message)
@@ -33,14 +35,14 @@ def scan():
 
     #passing for preprocessing
     output = dp.dataProcess(name)
-    
+
     #deleting directories
     print('Deleting files...')
     os.remove(f'videos/{name}.mp4')
     shutil.rmtree(f'videos/{name}/')
     print('Files deleted after detection!')
 
-    return render_template('index.html', result = '{}'.format(output))
+    return render_template('index.html', result = '{}'.format(output), loading = '{}'.format(" "))
 
 
 if __name__=="main":

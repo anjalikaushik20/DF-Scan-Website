@@ -33,9 +33,10 @@
     <input class="myFile" type="file" name="fileName" hidden>
 
     <div class="scan-area">
-      <button type="submit">Scan</button>
+      <button onclick="showLoading()" type="submit">Scan</button>
     </div>
 
+    <h4 id="load">{{ loading }}</h4>
     <h5>Classification: {{ result }} </h5>
   </form>
 

@@ -56,3 +56,8 @@ function showFile(){
     dragText.textContent = "Drag & Drop to Upload File";
   }
 }
+
+//Loading!
+function showLoading(){
+  document.getElementById('load').style.display = 'block';
+}
