@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 import cgitb
+import os
+import shutil
 from sklearn import preprocessing; cgitb.enable()
 # import cgi
 import python.dataPrep as dp
@@ -31,9 +33,12 @@ def scan():
 
     #passing for preprocessing
     output = dp.dataProcess(name)
-
-    #gibberish
-    # output = "Rake"
+    
+    #deleting directories
+    print('Deleting files...')
+    os.remove(f'videos/{name}.mp4')
+    shutil.rmtree(f'videos/{name}/')
+    print('Files deleted after detection!')
 
     return render_template('index.html', result = '{}'.format(output))
 

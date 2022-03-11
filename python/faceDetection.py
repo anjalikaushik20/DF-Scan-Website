@@ -85,9 +85,12 @@ def FaceDetect(_filename_only):
 
     print(count0)
     print(count1)
+    total = count0 + count1
     if count0 > count1:
-        print("Fake")
+        fp = (count0/total)*100
+        print(f"{fp}% Fake")
         return 'Fake'
     else:
-        print("Real")
+        rp = (count1/total)*100
+        print(f"{rp}% Real")
         return 'Real'
