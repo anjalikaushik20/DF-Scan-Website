@@ -22,23 +22,9 @@
     </nav>
   </header>
 
-  <form name="myForm" action="{{ url_for('scan')}}" method="POST" enctype="multipart/form-data">
-    <div class="drag-area row">
-      <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
-      <header>Drag & Drop to Upload File</header>
-      <span>OR</span>
-      <button type="button">Browse File</button>
-    </div>
-    
-    <input class="myFile" type="file" name="fileName" hidden>
-
-    <div class="scan-area">
-      <button onclick="showLoading()" type="submit">Scan</button>
-    </div>
-
-    <h4 id="load">{{ loading }}</h4>
-    <!-- <h5>Classification: {{ result }} </h5> -->
-  </form>
+<a href="/">Try another video</a> 
+<br>
+<h5>Classification: {{ result }} </h5>
 
   <script src="/static/script.js"></script>
 

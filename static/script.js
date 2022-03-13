@@ -60,4 +60,5 @@ function showFile(){
 //Loading!
 function showLoading(){
   document.getElementById('load').style.display = 'block';
+  // document.getElementById('load').innerText = 'Loading!';
 }

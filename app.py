@@ -8,7 +8,6 @@ import python.dataPrep as dp
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def home():
     return render_template('index.html', loading = '{}'.format("Loading!"))
@@ -17,38 +16,40 @@ def home():
 def scan():
     # form = cgi.FieldStorage()
     # fileitem = form.getvalue('fileName')
-    _fileitem = request.files.get('fileName')
-
     # _fullname = _fileitem.filename
-    name = _fileitem.filename.split('.')[0]
-    extension = _fileitem.filename.split('.')[1]
-    if extension == 'mp4':
-        if _fileitem:
+    
+    _fileitem = request.files.get('fileName')
+    
+    if _fileitem:
+        name = _fileitem.filename.split('.')[0]
+        extension = _fileitem.filename.split('.')[1]
+        if extension == 'mp4':
             _fileitem.save(f'videos/{name}.mp4')
             message = 'The file was uploaded successfully'
         else:
-            message = 'No file was uploaded'
-            output = 'Try Again!'
-            return render_template('index.html', result = '{}'.format(output))
-
-        
-        print(message)
-        print(_fileitem)
-        # print(_fullname)
-
-        #passing for preprocessing
-        output = dp.dataProcess(name)
-
-        #deleting directories
-        print('Deleting files...')
-        os.remove(f'videos/{name}.mp4')
-        shutil.rmtree(f'videos/{name}/')
-        print('Files deleted after detection!')
-
-        return render_template('index.html', result = '{}'.format(output), loading = '{}'.format(" "))
-        
+            return render_template('result.html', result = '{}'.format('Error: Not an mp4 file!'), loading = '{}'.format(" "))
     else:
-        return render_template('index.html', result = '{}'.format('Error: Not an mp4 file!'), loading = '{}'.format(" "))
+        message = 'No file was uploaded'
+        output = 'No file was uploaded. Try Again!'
+        return render_template('result.html', result = '{}'.format(output))
+
+    
+    print(message)
+    print(_fileitem)
+    # print(_fullname)
+
+    #passing for preprocessing
+    output = dp.dataProcess(name)
+
+    #deleting directories
+    print('Deleting files...')
+    os.remove(f'videos/{name}.mp4')
+    shutil.rmtree(f'videos/{name}/')
+    print('Files deleted after detection!')
+
+    return render_template('result.html', result = '{}'.format(output), loading = '{}'.format(" "))
+        
+    
 
 
 if __name__=="main":
