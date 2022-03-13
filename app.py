@@ -5,12 +5,13 @@ import shutil
 from sklearn import preprocessing; cgitb.enable()
 # import cgi
 import python.dataPrep as dp
+from flask import Markup
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template('index.html', loading = '{}'.format("Loading!"))
+    return render_template('index.html', loading = Markup("<img height=\"50px\" width=\"50px\" src=\"/static/assets/loading.gif\" alt=\"Scanning\">"))
 
 @app.route("/scan", methods=['POST'])
 def scan():

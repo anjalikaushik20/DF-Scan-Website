@@ -36,7 +36,7 @@
       <button onclick="showLoading()" type="submit">Scan</button>
     </div>
 
-    <h4 id="load">{{ loading }}</h4>
+    <h4 id="load">{{ loading | safe }}</h4>
     <!-- <h5>Classification: {{ result }} </h5> -->
   </form>
 

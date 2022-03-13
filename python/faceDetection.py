@@ -89,8 +89,8 @@ def FaceDetect(_filename_only):
     if count0 > count1:
         fp = (count0/total)*100
         print(f"{fp}% Fake")
-        return 'Fake'
+        return 'DeepFake Video'
     else:
         rp = (count1/total)*100
         print(f"{rp}% Real")
-        return 'Real'
+        return 'Real Video'

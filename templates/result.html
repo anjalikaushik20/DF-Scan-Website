@@ -16,15 +16,17 @@
   <header class="header">
     <nav class="navbar navbar-expand-lg fixed-top py-3">
         <div class="navbar-centered">
-          <a href="index.html" class="navbar-brand text-uppercase">Deepfake Scanner</a>
+          <a href="result.html" class="navbar-brand text-uppercase">Deepfake Scanner</a>
             <!-- <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button> -->
         </div>
     </nav>
   </header>
 
-<a href="/">Try another video</a> 
-<br>
-<h5>Classification: {{ result }} </h5>
+  <div class="divRes">
+    <a class="result" href="/">Try another video</a> 
+
+    <h5>Classification: {{ result }} </h5>
+  </div>
 
   <script src="/static/script.js"></script>
 
