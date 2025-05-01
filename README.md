@@ -1,9 +1,9 @@
 # Advanced Deepfake Detection  
 *Sequential Inception-ResNet-v2 Pipeline with MTCNN Pre-processing*
 
-**Authors:** Anjali Kaushik, Dhyey Nilesh Doshi, Sandip Mal & Lokesh Malviya  
-**Affiliation:** Vellore Institute of Technology, Bhopal
-**Conference:** ICCIS'23 by the Soft-Computing Society of India, NIT, Jaipur
+**Authors:** Anjali Kaushik, Dhyey Nilesh Doshi, Sandip Mal & Lokesh Malviya \
+**Affiliation:** Vellore Institute of Technology, Bhopal \
+**Conference:** ICCIS'23 by the Soft-Computing Society of India, NIT, Jaipur \
 **Paper:** [Springer LNNS Vol. 967, “Advanced Deepfake Detection”](https://link.springer.com/chapter/10.1007/978-981-97-2053-8_11)
 
 ---
