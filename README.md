@@ -3,7 +3,7 @@
 
 > **Authors:** Anjali Kaushik · Dhyey Nilesh Doshi · Sandip Mal · Lokesh Malviya
 > **Institution:** Vellore Institute of Technology, Bhopal
-> **Venue:** National IT Conference, Jaipur (Lecture Notes in Networks & Systems, Vol 967, Springer 2024) :contentReference[oaicite:0]{index=0}&#8203;:contentReference[oaicite:1]{index=1}  
+> **Venue:** ICCIS'23 by the Soft-Computing Society of India, National Institute of Technology, Jaipur
 > **Paper:** [Advanced Deepfake Detection](https://link.springer.com/chapter/10.1007/978-981-97-2053-8_11)
 
 ---
